@@ -1,28 +1,29 @@
-REMIX DEFAULT WORKSPACE
+# Implement Student Registry System
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+## Description
 
-This workspace contains 3 directories:
+This PR implements the complete Student Registry system. It includes contracts for student management, ownership, and utility functions. The following components are included:
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+1. **StudentStruct.sol**: Defines the `Student` structure.
+2. **Ownable.sol**: Provides ownership management functionality.
+3. **StudentCounter.sol**: Manages student ID incrementing.
+4. **StudentRegistry.sol**: Main contract for registering, updating, authorizing, and managing students.
+5. **MyStudentRegistry.sol**: A wrapper contract for interacting with the `StudentRegistry` contract.
+6. **IStudentRegistry.sol**: Interface for the `StudentRegistry` contract.
 
-SCRIPTS
+## How to Test
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+1. **Deploy Contracts**: Deploy `StudentRegistry` and `MyStudentRegistry` contracts.
+2. **Register Student**: Use `MyStudentRegistry` to register a student by sending 1 Ether.
+3. **Authorize Student**: Authorize the student using `StudentRegistry`'s `authorizeStudent` method.
+4. **Update Student**: Update student details via `MyStudentRegistry`.
+5. **Delete Student**: Delete a student's record via `MyStudentRegistry`.
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+##
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+ Notes
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+- Ensure that contract addresses are correctly set during deployment.
+- Verify that all function calls are made with the correct parameters and Ether amounts.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+---
