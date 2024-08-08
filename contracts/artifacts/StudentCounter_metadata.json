@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "This contract is used to manage and track student IDs. It includes functions to get, increase, and decrease the student ID.",
+			"kind": "dev",
+			"methods": {},
+			"title": "StudentCounter",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StudentCounter.sol": "StudentCounter"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StudentCounter.sol": {
+			"keccak256": "0x2bcebaec0f905b83589bbe870603f291bcbedcce1d471ada3d433c3bdf8c96a8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://641c772c70e114114d052de904eb09c1ef082d823d85108cd68a7c7795c6e104",
+				"dweb:/ipfs/QmUFXebLM2F6iUjuV688t4Vj9Haz66bzDeYob7beSBRLgk"
+			]
+		}
+	},
+	"version": 1
+}

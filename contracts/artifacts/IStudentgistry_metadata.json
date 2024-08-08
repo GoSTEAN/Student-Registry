@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IStudentRegistry.sol": "IStudentgistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IStudentRegistry.sol": {
+			"keccak256": "0x2bbe171343784ead8d371031366478c019f8786d811dd0b6be57ef56658940cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3f49ddd6301f4f55082abdb9f1c0e1c46c8b79235d58bbb01ba4003816eeb7e8",
+				"dweb:/ipfs/QmPBcQfwBb6iU8K5PeQakD5RCai9a4aBtwzgpVUfW3qr2r"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,312 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bool",
+						"name": "hasPaid",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "PaymentStatus",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "changedOwner",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "authorizeStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "deleteStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "getStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "studentAddr",
+								"type": "address"
+							},
+							{
+								"internalType": "uint32",
+								"name": "studentId",
+								"type": "uint32"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bool",
+								"name": "isAuthorized",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "modifyOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "myStudentId",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "receipt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "registerStudent",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_oldAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "updateStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StudentRegistry.sol": "StudentRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ownable.sol": {
+			"keccak256": "0xecb2ec315c657db13cf6c8c589ca7960dbe203fd92d31385f768ce8d0f542d67",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a33a2086ab62e9dfc9525b7a7dd0ede6e1fef531e4fab99bacde55e4ded69ea3",
+				"dweb:/ipfs/QmSVqz6zAHMtfDsV7Xbm7kMVhoKhNsPxMtggkSqhh3jGcg"
+			]
+		},
+		"contracts/StudentCounter.sol": {
+			"keccak256": "0x5ca7efa79778e3e7c9ee5e5076e12f0b9e68b143a25970154009ad7fbc49668c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82d0c8a58e5895e977807a2cc22be10bc5f69872107dd33d120d96394076fdfc",
+				"dweb:/ipfs/Qma6c4LMSPmAnLakEHgFZV5a2m8KgW1LakB7Fi3rNHZUdZ"
+			]
+		},
+		"contracts/StudentRegistry.sol": {
+			"keccak256": "0x23dd258029aa24c5482932e0c565d83ebc51d0c0c64e717a0cbce02ebdc5826a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cd12d1ca5409a7aef148a54a51e2ab509b7107c65bccfb01aad9be8f7a775770",
+				"dweb:/ipfs/QmbkUXMJZ2fC1PJNhg7iM1ct58ayeHA5h3RvcN8dwHSGSX"
+			]
+		},
+		"contracts/StudentStruct.sol": {
+			"keccak256": "0x268cce16258beee104ce005a1aa218181bd21cd44e028339ab02f1a29d50eac5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8444a35556858bfb8c71c6e99a204d020dae2ecb47f817b3c3618f6db74d151f",
+				"dweb:/ipfs/Qmdjwwvi9XZKQNr53HoQgYCf5ZcXEPcF3WNmgLKo32d5Qv"
+			]
+		}
+	},
+	"version": 1
+}

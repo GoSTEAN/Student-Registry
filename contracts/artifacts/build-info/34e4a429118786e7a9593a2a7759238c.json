@@ -1,0 +1,765 @@
+{
+	"id": "34e4a429118786e7a9593a2a7759238c",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/StudentCounter.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.7.0 <0.9.0;\n\n\n/**\n * @title StudentCounter\n * @dev This contract is used to manage and track student IDs.\n * It includes functions to get, increase, and decrease the student ID.\n */\ncontract StudentCounter {\n    uint32 internal  studentId = 0;\n\n    /**\n     * @dev Retrieve the current student ID.\n     * @return The current student ID.\n     */\n    function getStudentId() internal  view returns (uint32) {\n        return studentId;\n    }\n\n    /**\n     * @dev Increase the student ID by 1.\n     */\n    function increaseStudentId() internal  {\n        studentId++;\n    }\n\n     /**\n     * @dev Decrease the student ID by 1.\n     */\n    function decreaseStudentId() internal  {\n        studentId--;\n    }\n}\n\n\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/StudentCounter.sol": {
+				"StudentCounter": {
+					"abi": [],
+					"devdoc": {
+						"details": "This contract is used to manage and track student IDs. It includes functions to get, increase, and decrease the student ID.",
+						"kind": "dev",
+						"methods": {},
+						"title": "StudentCounter",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/StudentCounter.sol\":234:755  contract StudentCounter {... */\n  mstore(0x40, 0x80)\n    /* \"contracts/StudentCounter.sol\":293:294  0 */\n  0x00\n    /* \"contracts/StudentCounter.sol\":264:294  uint32 internal  studentId = 0 */\n  dup1\n  exp(0x0100, 0x00)\n  dup2\n  sload\n  dup2\n  0xffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"contracts/StudentCounter.sol\":234:755  contract StudentCounter {... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/StudentCounter.sol\":234:755  contract StudentCounter {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220ba2e19cbbc3da9bc0dbdf65c11cf891dc4b5e062c624c0fd7e8e3f639c4ac1a164736f6c634300081a0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "60806040525f805f6101000a81548163ffffffff021916908363ffffffff160217905550348015602d575f80fd5b50603e8060395f395ff3fe60806040525f80fdfea2646970667358221220ba2e19cbbc3da9bc0dbdf65c11cf891dc4b5e062c624c0fd7e8e3f639c4ac1a164736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 PUSH0 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH4 0xFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH4 0xFFFFFFFF AND MUL OR SWAP1 SSTORE POP CALLVALUE DUP1 ISZERO PUSH1 0x2D JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x39 PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBA 0x2E NOT 0xCB 0xBC RETURNDATASIZE 0xA9 0xBC 0xD 0xBD 0xF6 TLOAD GT 0xCF DUP10 SAR 0xC4 0xB5 0xE0 PUSH3 0xC624C0 REVERT PUSH31 0x8E3F639C4AC1A164736F6C634300081A003300000000000000000000000000 ",
+							"sourceMap": "234:521:0:-:0;;;293:1;264:30;;;;;;;;;;;;;;;;;;;;234:521;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f80fdfea2646970667358221220ba2e19cbbc3da9bc0dbdf65c11cf891dc4b5e062c624c0fd7e8e3f639c4ac1a164736f6c634300081a0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xBA 0x2E NOT 0xCB 0xBC RETURNDATASIZE 0xA9 0xBC 0xD 0xBD 0xF6 TLOAD GT 0xCF DUP10 SAR 0xC4 0xB5 0xE0 PUSH3 0xC624C0 REVERT PUSH31 0x8E3F639C4AC1A164736F6C634300081A003300000000000000000000000000 ",
+							"sourceMap": "234:521:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "24329",
+								"totalCost": "36729"
+							},
+							"internal": {
+								"decreaseStudentId()": "infinite",
+								"getStudentId()": "infinite",
+								"increaseStudentId()": "infinite"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 293,
+									"end": 294,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFF"
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFF"
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 264,
+									"end": 294,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 234,
+									"end": 755,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220ba2e19cbbc3da9bc0dbdf65c11cf891dc4b5e062c624c0fd7e8e3f639c4ac1a164736f6c634300081a0033",
+									".code": [
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 234,
+											"end": 755,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"contracts/StudentCounter.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"This contract is used to manage and track student IDs. It includes functions to get, increase, and decrease the student ID.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"StudentCounter\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/StudentCounter.sol\":\"StudentCounter\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/StudentCounter.sol\":{\"keccak256\":\"0x2bcebaec0f905b83589bbe870603f291bcbedcce1d471ada3d433c3bdf8c96a8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://641c772c70e114114d052de904eb09c1ef082d823d85108cd68a7c7795c6e104\",\"dweb:/ipfs/QmUFXebLM2F6iUjuV688t4Vj9Haz66bzDeYob7beSBRLgk\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 5,
+								"contract": "contracts/StudentCounter.sol:StudentCounter",
+								"label": "studentId",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_uint32"
+							}
+						],
+						"types": {
+							"t_uint32": {
+								"encoding": "inplace",
+								"label": "uint32",
+								"numberOfBytes": "4"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/StudentCounter.sol": {
+				"ast": {
+					"absolutePath": "contracts/StudentCounter.sol",
+					"exportedSymbols": {
+						"StudentCounter": [
+							31
+						]
+					},
+					"id": 32,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "StudentCounter",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "66:167:0",
+								"text": " @title StudentCounter\n @dev This contract is used to manage and track student IDs.\n It includes functions to get, increase, and decrease the student ID."
+							},
+							"fullyImplemented": true,
+							"id": 31,
+							"linearizedBaseContracts": [
+								31
+							],
+							"name": "StudentCounter",
+							"nameLocation": "243:14:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 5,
+									"mutability": "mutable",
+									"name": "studentId",
+									"nameLocation": "281:9:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 31,
+									"src": "264:30:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint32",
+										"typeString": "uint32"
+									},
+									"typeName": {
+										"id": 3,
+										"name": "uint32",
+										"nodeType": "ElementaryTypeName",
+										"src": "264:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint32",
+											"typeString": "uint32"
+										}
+									},
+									"value": {
+										"hexValue": "30",
+										"id": 4,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "293:1:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_rational_0_by_1",
+											"typeString": "int_const 0"
+										},
+										"value": "0"
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 13,
+										"nodeType": "Block",
+										"src": "457:33:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 11,
+													"name": "studentId",
+													"nodeType": "Identifier",
+													"overloadedDeclarations": [],
+													"referencedDeclaration": 5,
+													"src": "474:9:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint32",
+														"typeString": "uint32"
+													}
+												},
+												"functionReturnParameters": 10,
+												"id": 12,
+												"nodeType": "Return",
+												"src": "467:16:0"
+											}
+										]
+									},
+									"documentation": {
+										"id": 6,
+										"nodeType": "StructuredDocumentation",
+										"src": "301:95:0",
+										"text": " @dev Retrieve the current student ID.\n @return The current student ID."
+									},
+									"id": 14,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "getStudentId",
+									"nameLocation": "410:12:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "422:2:0"
+									},
+									"returnParameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 9,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "449:6:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint32",
+													"typeString": "uint32"
+												},
+												"typeName": {
+													"id": 8,
+													"name": "uint32",
+													"nodeType": "ElementaryTypeName",
+													"src": "449:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint32",
+														"typeString": "uint32"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "448:8:0"
+									},
+									"scope": 31,
+									"src": "401:89:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 21,
+										"nodeType": "Block",
+										"src": "593:28:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 19,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"nodeType": "UnaryOperation",
+													"operator": "++",
+													"prefix": false,
+													"src": "603:11:0",
+													"subExpression": {
+														"id": 18,
+														"name": "studentId",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 5,
+														"src": "603:9:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint32",
+															"typeString": "uint32"
+														}
+													},
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint32",
+														"typeString": "uint32"
+													}
+												},
+												"id": 20,
+												"nodeType": "ExpressionStatement",
+												"src": "603:11:0"
+											}
+										]
+									},
+									"documentation": {
+										"id": 15,
+										"nodeType": "StructuredDocumentation",
+										"src": "496:53:0",
+										"text": " @dev Increase the student ID by 1."
+									},
+									"id": 22,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "increaseStudentId",
+									"nameLocation": "563:17:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "580:2:0"
+									},
+									"returnParameters": {
+										"id": 17,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "593:0:0"
+									},
+									"scope": 31,
+									"src": "554:67:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 29,
+										"nodeType": "Block",
+										"src": "725:28:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 27,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"nodeType": "UnaryOperation",
+													"operator": "--",
+													"prefix": false,
+													"src": "735:11:0",
+													"subExpression": {
+														"id": 26,
+														"name": "studentId",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 5,
+														"src": "735:9:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint32",
+															"typeString": "uint32"
+														}
+													},
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint32",
+														"typeString": "uint32"
+													}
+												},
+												"id": 28,
+												"nodeType": "ExpressionStatement",
+												"src": "735:11:0"
+											}
+										]
+									},
+									"documentation": {
+										"id": 23,
+										"nodeType": "StructuredDocumentation",
+										"src": "628:53:0",
+										"text": " @dev Decrease the student ID by 1."
+									},
+									"id": 30,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "decreaseStudentId",
+									"nameLocation": "695:17:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 24,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "712:2:0"
+									},
+									"returnParameters": {
+										"id": 25,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "725:0:0"
+									},
+									"scope": 31,
+									"src": "686:67:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 32,
+							"src": "234:521:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "32:726:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

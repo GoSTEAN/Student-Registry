@@ -1,0 +1,174 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "authorizeStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "deleteStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					}
+				],
+				"name": "getStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "registerStudent",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_oldAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_studentAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					}
+				],
+				"name": "updateStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface for the StudentRegistry contract. Defines the functions available for interacting with the student registry.",
+			"kind": "dev",
+			"methods": {
+				"authorizeStudent(address)": {
+					"details": "Authorize a student for registration by setting their status to authorized.",
+					"params": {
+						"_studentAddr": "The address of the student to authorize."
+					}
+				},
+				"deleteStudent(address)": {
+					"details": "Delete a student's record.",
+					"params": {
+						"_studentAddr": "The address of the student to delete."
+					}
+				},
+				"getStudent(address)": {
+					"details": "Retrieve a student's information.",
+					"params": {
+						"_studentAddr": "The address of the student to retrieve."
+					}
+				},
+				"registerStudent(address,string,uint8)": {
+					"details": "Register a student with the provided address, name, and age.",
+					"params": {
+						"_age": "The age of the student.",
+						"_name": "The name of the student.",
+						"_studentAddr": "The address of the student to register."
+					}
+				},
+				"updateStudent(address,address,string,uint8)": {
+					"details": "Update a student's information, including potentially changing their address.",
+					"params": {
+						"_age": "The new age of the student.",
+						"_name": "The new name of the student.",
+						"_oldAddr": "The current address of the student.",
+						"_studentAddr": "The new address of the student."
+					}
+				}
+			},
+			"title": "IStudentRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IStudentRegistry.sol": "IStudentRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IStudentRegistry.sol": {
+			"keccak256": "0x55b476e868831cd6709ae25706e93ba8d627ed8302f01fec1830aee395129161",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://38debd15c86c3e704158e6a4508ef0208a06571f7f705570df5b0545b15090f6",
+				"dweb:/ipfs/QmeY2cbbp5VFN8ZkE6SP1NXgRhXkYGjnGLzYqG3w7q9CJ4"
+			]
+		}
+	},
+	"version": 1
+}
